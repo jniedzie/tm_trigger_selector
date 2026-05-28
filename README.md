@@ -93,3 +93,23 @@ Then, simply run:
 ```
 
 You can check the progress with `condor_q`, as usual.
+
+## Merging
+
+This is super important - when merging these output files, you need to use `hadd` from the CMSSW environment used to produce them.
+So first, make sure to do `cmsenv`:
+
+```bash
+cd tm_trigger_selector/CMSSW_15_0_15/src/
+cmsenv
+```
+
+Only then merge your files:
+
+```bash
+cd /pnfs/iihe/cms/store/user/jniedzie/tm
+hadd -f -j -k merged_skimmed_passing_trigger.root skimmed_passing_trigger/*.root
+```
+
+
+
