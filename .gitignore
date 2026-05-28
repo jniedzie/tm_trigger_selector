@@ -1,0 +1,9 @@
+tmp/
+cache/
+*.pyc
+*.o
+*.so
+*.d
+*.pcm
+*.root
+.DS_Store
