@@ -1,0 +1,14 @@
+executable = run_job.sh
+
+arguments = $(input) $(output)
+
+output = logs/job_$(Cluster)_$(Process).out
+error  = logs/job_$(Cluster)_$(Process).err
+log    = logs/job_$(Cluster).log
+
+should_transfer_files = NO
+
+request_cpus = 1
+request_memory = 2GB
+
+queue input, output from filelist.txt

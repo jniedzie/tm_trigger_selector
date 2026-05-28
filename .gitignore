@@ -7,3 +7,6 @@ cache/
 *.pcm
 *.root
 .DS_Store
+
+logs/*
+filelist.txt

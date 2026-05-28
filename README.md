@@ -76,3 +76,20 @@ and then simply run with:
 ```
 ./run_skimming.sh
 ```
+
+## Running on condor
+
+You can also submit jobs to condor - useful when you have many input files. Open `submit.sh` and set input/output paths:
+
+```bash
+INPUT_DIR="/pnfs/iihe/cms/store/user/sduponch/PhD/TMToEE/etaToTMGamma/20260508/Simulation/MINIAODSIM/2022"
+OUTPUT_DIR="/pnfs/iihe/cms/store/user/jniedzie/tm/skimmed_passing_trigger_condor"
+```
+
+Then, simply run:
+
+```bash
+./submit.sh
+```
+
+You can check the progress with `condor_q`, as usual.
